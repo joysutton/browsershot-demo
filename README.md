@@ -21,12 +21,14 @@ Before you begin, ensure you have the following installed:
 - MySQL 8.0+
 - Chromium (for PDF generation)
 
+> **Note for Apple Silicon Users:** If you're setting up this project on Apple Silicon (M1/M2/M3), please refer to our [Browsershot Setup Guide](browsershot-setup.md) for specific configuration steps.
+
 ## Installation
 
 1. **Clone the repository**
    ```bash
    git clone <repository-url>
-   cd product-spec-sheet
+   cd browsershot-demo
    ```
 
 2. **Install PHP dependencies**
@@ -80,12 +82,13 @@ Before you begin, ensure you have the following installed:
 The application uses Browsershot for PDF generation. Ensure your server has the following:
 
 1. **Install Chromium**
-   - MacOS: `brew install chromium`
-   - Ubuntu: `sudo apt-get install chromium-browser`
-   - Other: Visit the [Chromium download page](https://www.chromium.org/getting-involved/download-chromium)
+    - MacOS: `brew install chromium`
+    - Ubuntu: `sudo apt-get install chromium-browser`
+    - Other: Visit the [Chromium download page](https://www.chromium.org/getting-involved/download-chromium)
 
 2. **Configure Paths**
-   Update the binary paths in `app/Http/Controllers/ProductController.php` or use environment variables.
+    - Update the binary paths in your `.env` file
+    - For Apple Silicon users, follow our [Browsershot Setup Guide](browsershot-setup.md)
 
 ## Features
 
@@ -93,3 +96,15 @@ The application uses Browsershot for PDF generation. Ensure your server has the 
 - PDF generation with custom styling
 - Print-optimized layout
 - Customizable footer with contact information
+
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Acknowledgments
+
+- [Laravel](https://laravel.com)
+- [Inertia.js](https://inertiajs.com)
+- [Tailwind CSS](https://tailwindcss.com)
+- [Spatie Browsershot](https://github.com/spatie/browsershot)
